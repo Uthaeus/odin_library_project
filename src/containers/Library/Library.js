@@ -7,11 +7,25 @@ class Library extends Component {
         books: []
     };
 
+    bookSubmitHandler = ( event ) => {
+        let newBook = event.target.data;
+        console.log('hitting submit handler');
+    }
+
     render() {
+        let library = this.state.books.map((book, index) => {
+            return <Book
+                bookSubmit={() => this.bookSubmitHandler()} />
+        });
+
         return (
             <div>
-
-            </div>
+                {library}
+            </div> 
         );
     }
 }
+
+
+
+export default Library;
