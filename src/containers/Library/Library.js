@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 
-import Book from '../../components/Book';
+import Book from '../../components/Book/Book';
 
 class Library extends Component {
-    state = {};
+    state = {
+        books: []
+    };
 
     render() {
         return (
             <div>
-                
+
             </div>
         );
     }
